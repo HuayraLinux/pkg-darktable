@@ -1,0 +1,3 @@
+# the embedded library is not functionally equivalent.
+# see http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=682980
+embedded-library usr/lib/darktable/libdarktable.so: libraw

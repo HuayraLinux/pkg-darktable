@@ -1,0 +1,52 @@
+Source: darktable
+Section: graphics
+Priority: optional
+Maintainer: Iván Hoffmann <digital.h@gmail.com>
+Build-Depends: debhelper (>= 9), cmake,
+ liblcms2-dev, libgtk-3-dev, libglib2.0-dev, libcairo2-dev, 
+ libjpeg-dev, libpng-dev, liblensfun-dev,
+ libtiff5-dev, libexiv2-dev, intltool, libglade2-dev,
+ libsqlite3-dev, libopenexr-dev, libgphoto2-dev,
+ libcurl4-gnutls-dev|libcurl-dev, libdbus-glib-1-dev, libgnome-keyring-dev,
+ librsvg2-dev, libflickcurl-dev, xsltproc, libsoup2.4-dev, 
+ libglu1-mesa-dev, libsdl1.2-dev, libvte-dev, libcolord-dev,
+ libjson-glib-dev, liblua5.2-dev,libpugixml-dev
+Standards-Version: 3.9.5
+Homepage: http://www.darktable.org/
+
+Package: darktable
+Architecture: any-i386 any-amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, gtk2-engines, 
+	 libjs-prototype, libjs-scriptaculous
+Replaces: darktable-plugins-legacy (<< 0.9), darktable-plugins-experimental (<< 1.0~)
+Breaks: darktable-plugins-legacy (<< 0.9), darktable-plugins-experimental (<< 1.0~)
+Description: virtual lighttable and darkroom for photographers
+ Darktable manages your digital negatives in a database and lets you view
+ them  through a zoomable lighttable. it also enables you to develop raw
+ images and enhance them.
+ .
+ It tries to fill the gap between the many excellent existing free
+ raw converters and image management tools (such as ufraw or f-spot).
+ The user interface is built around efficient caching of image metadata and
+ mipmaps, all stored in a database. the user will always be able to interact,
+ even if the full resolution image is not yet loaded.
+ .
+ All editing is fully non-destructive and only operates on cached image
+ buffers for display. the full image is only converted during export. The
+ frontend is written in gtk+/cairo, the database uses sqlite3, raw image
+ loading is done using libraw, high-dynamic range, and standard image formats
+ such as jpeg are also supported. The core operates completely on floating
+ point values, so darktable can not only be used for photography but also for
+ scientifically acquired images or output of renderers (high dynamic range).
+
+Package: darktable-dbg
+Architecture: any-i386 any-amd64
+Section: debug
+Priority: extra
+Depends: ${misc:Depends}, darktable (= ${binary:Version})
+Description: virtual lighttable and darkroom for photographers (debug)
+ Darktable manages your digital negatives in a database and lets you view
+ them  through a zoomable lighttable. it also enables you to develop raw
+ images and enhance them.
+ .
+ This package contains the debugging symbols
