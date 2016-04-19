@@ -1,4 +1,3 @@
 version=3
 
-http://sf.net/darktable/darktable-(.+)\.tar\.xz
-
+https://github.com/darktable-org/darktable/tags .*/release-(\d[\d\.]+)\.tar\.gz
