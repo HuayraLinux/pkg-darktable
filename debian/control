@@ -4,20 +4,20 @@ Priority: optional
 Maintainer: Iván Hoffmann <digital.h@gmail.com>
 Build-Depends: debhelper (>= 9), cmake,
  liblcms2-dev, libgtk-3-dev, libglib2.0-dev, libcairo2-dev, 
- libjpeg-dev, libpng-dev, liblensfun-dev,
- libtiff5-dev, libexiv2-dev, intltool, libglade2-dev,
- libsqlite3-dev, libopenexr-dev, libgphoto2-dev,
- libcurl4-gnutls-dev|libcurl-dev, libdbus-glib-1-dev, libgnome-keyring-dev,
- librsvg2-dev, libflickcurl-dev, xsltproc, libsoup2.4-dev, 
- libglu1-mesa-dev, libsdl1.2-dev, libvte-dev, libcolord-dev,
- libjson-glib-dev, liblua5.2-dev,libpugixml-dev
+ libjpeg-dev, libpng-dev, liblensfun-dev, libtiff5-dev,
+ libexiv2-dev, libglade2-dev, libsqlite3-dev, libopenexr-dev,
+ libgphoto2-dev, libcurl4-gnutls-dev | libcurl-dev, libdbus-glib-1-dev, libgnome-keyring-dev,
+ librsvg2-dev, libflickcurl-dev, libsoup2.4-dev, libglu1-mesa-dev,
+ libsdl1.2-dev, libvte-dev, libcolord-dev, libcolord-gtk-dev,
+ libjson-glib-dev, liblua5.2-dev, libpugixml-dev, libopenjpeg-dev,
+ libsecret-1-dev, libgraphicsmagick++1-dev, libwebp-dev, libcups2-dev,
+ desktop-file-utils, appstream-util, intltool, po4a, xsltproc,
 Standards-Version: 3.9.5
 Homepage: http://www.darktable.org/
 
 Package: darktable
 Architecture: any-i386 any-amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}, gtk2-engines, 
-	 libjs-prototype, libjs-scriptaculous
 Replaces: darktable-plugins-legacy (<< 0.9), darktable-plugins-experimental (<< 1.0~)
 Breaks: darktable-plugins-legacy (<< 0.9), darktable-plugins-experimental (<< 1.0~)
 Description: virtual lighttable and darkroom for photographers

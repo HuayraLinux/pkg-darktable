@@ -16,7 +16,6 @@ override_dh_auto_configure: cmake/version.cmake
 
 override_dh_auto_install:
 	dh_auto_install
-	find $(CURDIR)/debian/tmp/usr/share/darktable/js -type f -delete
 
 override_dh_strip:
 	dh_strip --dbg-package=darktable-dbg
