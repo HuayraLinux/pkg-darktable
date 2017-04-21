@@ -30,3 +30,6 @@ get-orig-source:
 
 cmake/version.cmake:
 	echo "set(PROJECT_VERSION \"${UPSTREAM}\")" > $@
+
+override_dh_auto_clean:
+	rm -f cmake/version.cmake
